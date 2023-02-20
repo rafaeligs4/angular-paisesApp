@@ -18,6 +18,7 @@ export class InputComponent implements OnInit{
     this.debouncer
     .pipe(debounceTime(300))
     .subscribe(valor=>{
+      this.onDebounce.emit(valor);
       console.log('debouncer: ',valor);
     });
   }
